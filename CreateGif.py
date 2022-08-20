@@ -4,8 +4,8 @@ import glob
 
 images = []
 
-path = ''
+path = 'images'
 for filename in sorted(glob.glob(os.path.join(path, '*.png'))):
     images.append(imageio.imread(filename))
 
-imageio.mimsave('alphaBeta.gif', images, duration=1)
+imageio.mimsave('images/alphaBeta.gif', images, duration=1)
