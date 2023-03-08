@@ -4,9 +4,9 @@ import glob
 
 images = []
 
-path = 'images'
-for filename in sorted(glob.glob(os.path.join(path, 'Page*.png'))):
+path = 'output'
+for filename in sorted(glob.glob(os.path.join(path, '*.png'))):
     images.append(imageio.imread(filename))
     print(f"Added {filename}")
 
-imageio.mimsave('images/alphaBeta.gif', images, duration=1)
+imageio.mimsave(f'{path}/gif.gif', images, duration=1)
